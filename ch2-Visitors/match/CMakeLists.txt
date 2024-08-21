@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
-project("syntax-check")
+project("matcher")
 
 # Set C++ standard to C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-set(SOURCE_FILE decl.cc)
+set(SOURCE_FILE MatchVisitor.cc)
 
 
 # Enable compilation database export
@@ -23,22 +23,23 @@ find_package(Clang REQUIRED CONFIG)
 # Include LLVM and Clang headers
 include_directories(${LLVM_INCLUDE_DIRS})
 include_directories(${CLANG_INCLUDE_DIRS})
+include_directories(MatchCb.hh)
 
 # Add LLVM definitions and link directories
 add_definitions(${LLVM_DEFINITIONS})
 link_directories(${LLVM_LIBRARY_DIRS})
 
 # Set source files
-set(SOURCE_FILES decl.cc)
+set(SOURCE_FILES MatchVisitor.cc)
 
 # Add executable
-add_executable(decl ${SOURCE_FILES})
+add_executable(match ${SOURCE_FILES})
 
 # Set compile flags
-set_target_properties(decl PROPERTIES COMPILE_FLAGS "-fno-rtti")
+set_target_properties(match PROPERTIES COMPILE_FLAGS "-fno-rtti")
 
 # Link against LLVM and Clang libraries
-target_link_libraries(decl
+target_link_libraries(match
   PRIVATE
   clangTooling
   clangBasic
@@ -64,7 +65,7 @@ target_link_libraries(decl
 
 # Ensure the compile_commands.json is copied to the source directory
 add_custom_command(
-  TARGET decl POST_BUILD
+  TARGET match POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy
           ${CMAKE_BINARY_DIR}/compile_commands.json
           ${CMAKE_SOURCE_DIR}/../compile_commands.json

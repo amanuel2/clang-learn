@@ -1,0 +1,1 @@
+#define RECURSIVE 1 /* AST Recursive visitor vs Regular DeclVisitor */

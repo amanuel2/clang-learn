@@ -1,0 +1,2 @@
+# Match Visitor
+AST matchers provide another approach for locating specific AST nodes. They can be particularly useful in linters when searching for improper pattern usage or in refactoring tools when identifying AST nodes for modification.
