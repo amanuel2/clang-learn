@@ -1,0 +1,10 @@
+config.ClassComplexityChecker_obj_root = "@CMAKE_CURRENT_BINARY_DIR@"
+config.ClassComplexityChecker_src_root = "@CMAKE_CURRENT_SOURCE_DIR@"
+config.ClangBinary = "@LLVM_INSTALL@/bin/clang"
+config.FileCheck = "@FILECHECK_CMD@"
+config.LIT = "@LIT_CMD"
+
+lit_config.load_config(
+        config, os.path.join(config.ClassComplexityChecker_src_root, "test/lit.cfg.py"))
+
+

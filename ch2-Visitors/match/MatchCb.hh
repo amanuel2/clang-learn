@@ -1,6 +1,7 @@
 
 #include "clang/ASTMatchers/ASTMatchFinder.h"
 #include "clang/ASTMatchers/ASTMatchers.h"
+#include "llvm/Support/WithColor.h"
 
 namespace Aman {
     namespace Finder {
@@ -14,7 +15,7 @@ namespace Aman {
                 if (const auto *FD = Result.Nodes.getNodeAs<clang::FunctionDecl>(MatchID)) {
                     const auto &SM = *Result.SourceManager;
                     const auto &Loc = FD->getLocation();
-                    llvm::outs().changeColor(llvm::raw_ostream::Colors::MAGENTA, false) << "Found 'max' function at " << SM.getFilename(Loc) << ":"
+                    llvm::WithColor::remark() << "Found 'max' function at " << SM.getFilename(Loc) << ":"
                                 << SM.getSpellingLineNumber(Loc) << ":"
                                 << SM.getSpellingColumnNumber(Loc) << "\n";
                 } else {

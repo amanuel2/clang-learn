@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/Users/amanuelbogale/Documents/clang-learn/ch2-Visitors/decl/build",
-  "command": "/Applications/NIX.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I/opt/homebrew/opt/llvm/include -isystem /opt/homebrew/include -std=c++17 -arch arm64 -isysroot /Applications/NIX.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.4   -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fno-rtti -o CMakeFiles/decl.dir/decl.cc.o -c /Users/amanuelbogale/Documents/clang-learn/ch2-Visitors/decl/decl.cc",
-  "file": "/Users/amanuelbogale/Documents/clang-learn/ch2-Visitors/decl/decl.cc",
-  "output": "CMakeFiles/decl.dir/decl.cc.o"
+  "directory": "/Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/build",
+  "command": "/Applications/NIX.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dclasschecker_EXPORTS -I/Users/amanuelbogale/Documents/llvm-project/install/include -I/Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/visitor.hh -I/Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/consumer.hh -I/Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/plugin.hh -std=c++17 -arch arm64 -isysroot /Applications/NIX.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.4 -fPIC   -D_DEBUG -D_GLIBCXX_ASSERTIONS -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fno-rtti -o CMakeFiles/classchecker.dir/checker.cc.o -c /Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/checker.cc",
+  "file": "/Users/amanuelbogale/Documents/clang-learn/ch4.5-class-checker/checker.cc",
+  "output": "CMakeFiles/classchecker.dir/checker.cc.o"
 }
 ]
