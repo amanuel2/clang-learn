@@ -10,6 +10,8 @@ namespace Aman {
 
         DeclarationMatcher M = functionDecl(decl().bind(MatchID), matchesName("max"));
 
+        /// @class MatchCB
+        /// @brief: Yo this is Aman
         class MatchCB : public MatchFinder::MatchCallback {
             virtual void run(const MatchFinder::MatchResult &Result) final {
                 if (const auto *FD = Result.Nodes.getNodeAs<clang::FunctionDecl>(MatchID)) {
